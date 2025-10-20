@@ -32,13 +32,13 @@ const TechnoVITPage = () => {
           <span className="text-6xl md:text-7xl lg:text-8xl font-bold font-mono text-purple-300 tracking-widest drop-shadow-xl">
             25
           </span>
-                    </div>
+        </div>
         <p className="mt-8 text-xl md:text-2xl text-purple-200 font-light tracking-wide">
           Healing with Intelligence
         </p>
         <div className="mt-12">
           <p className="text-lg text-gray-300 font-mono">
-            India's Biggest Technical Fest
+            India&apos;s Biggest Technical Fest
           </p>
           <p className="text-sm text-gray-400 font-mono mt-2">
             October 31st & November 2nd, 2025

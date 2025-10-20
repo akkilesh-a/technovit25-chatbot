@@ -48,7 +48,7 @@ const MiniChatbot = ({ onClose }: MiniChatbotProps) => {
     const savedMessages = localStorage.getItem("technovit-messages");
     if (savedMessages) {
       try {
-        const parsedMessages = JSON.parse(savedMessages);
+        JSON.parse(savedMessages);
         // Note: useChat doesn't have a direct way to set initial messages
       } catch (error) {
         console.error("Error loading messages from localStorage:", error);
@@ -127,7 +127,6 @@ const MiniChatbot = ({ onClose }: MiniChatbotProps) => {
             style={{
               msOverflowStyle: "none",
               scrollbarWidth: "none",
-              WebkitScrollbar: "none",
             }}
           >
             {messages.length === 0 && (
@@ -140,15 +139,13 @@ const MiniChatbot = ({ onClose }: MiniChatbotProps) => {
               </div>
             )}
 
-            {messages.map((message: any) => (
+            {messages.map((message) => (
               <Message key={message.id} from={message.role}>
                 <MessageContent>
                   <Response className="text-sm">
                     {message.parts
-                      ?.map((part: any, index: number) =>
-                        part.type === "text" ? part.text : ""
-                      )
-                      .join("") || message.content}
+                      ?.map((part) => (part.type === "text" ? part.text : ""))
+                      .join("")}
                   </Response>
                 </MessageContent>
               </Message>
