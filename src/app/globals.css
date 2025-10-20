@@ -120,3 +120,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide scrollbar for mini chatbot */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Additional scrollbar hiding for conversation content */
+.conversation-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.conversation-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Force hide scrollbars in chatbot */
+.conversation-scroll::-webkit-scrollbar-track {
+  display: none;
+}
+.conversation-scroll::-webkit-scrollbar-thumb {
+  display: none;
+}
+.conversation-scroll::-webkit-scrollbar-corner {
+  display: none;
+}
